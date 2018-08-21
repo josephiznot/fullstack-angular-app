@@ -1,0 +1,5 @@
+<input [placeholder]="placeholder" [(ngModel)]="val" />
+<button (click)="addTask(val)">Add Task</button>
+<div *ngFor="let task of tasks">
+  <mat-checkbox>{{task}}</mat-checkbox>
+</div>

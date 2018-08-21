@@ -1,5 +1,4 @@
 import { Component, OnInit, NgModule } from "@angular/core";
-import { MatToolbarModule } from "@angular/material/toolbar";
 
 @Component({
   selector: "app-nav-bar",
@@ -8,6 +7,6 @@ import { MatToolbarModule } from "@angular/material/toolbar";
 })
 export class NavBarComponent implements OnInit {
   constructor() {}
-
+  title: String = "Joe's Todo App";
   ngOnInit() {}
 }

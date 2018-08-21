@@ -1,0 +1,5 @@
+@import "~src/Sass/boiler_plate";
+
+mat-toolbar {
+  @include flex(center, center, row);
+}
