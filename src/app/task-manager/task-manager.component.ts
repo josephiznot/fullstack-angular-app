@@ -6,13 +6,12 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./task-manager.component.scss"]
 })
 export class TaskManagerComponent implements OnInit {
-  placeholder: String = "Enter new task...";
-  imgUrl: string = "https://i.ytimg.com/vi/SfLV8hD7zX4/maxresdefault.jpg";
-  tasks: string[] = [];
   constructor() {}
-  addTask = val => {
-    this.tasks.push(val);
-  };
+  placeholder: String = "Enter new task...";
+  tasks: string[] = [];
+  val: string = "";
+
+  addTask = () => {};
 
   ngOnInit() {}
 }

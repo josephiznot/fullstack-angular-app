@@ -9,9 +9,15 @@ import { MatCheckboxModule } from "@angular/material/checkbox";
 import { TaskManagerComponent } from "./task-manager/task-manager.component";
 import { AppComponent } from "./app.component";
 import { NavBarComponent } from "./nav-bar/nav-bar.component";
+import { TasksComponent } from "./tasks/tasks.component";
 
 @NgModule({
-  declarations: [AppComponent, NavBarComponent, TaskManagerComponent],
+  declarations: [
+    AppComponent,
+    NavBarComponent,
+    TaskManagerComponent,
+    TasksComponent
+  ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
