@@ -6,17 +6,23 @@ import { FormsModule } from "@angular/forms";
 import { MatToolbarModule } from "@angular/material/toolbar";
 import { MatCheckboxModule } from "@angular/material/checkbox";
 
-import { TaskManagerComponent } from "./task-manager/task-manager.component";
 import { AppComponent } from "./app.component";
-import { NavBarComponent } from "./nav-bar/nav-bar.component";
-import { TasksComponent } from "./tasks/tasks.component";
+import {
+  TaskManagerComponent,
+  AddTaskComponent,
+  SelectedTaskComponent,
+  TasksComponent,
+  NavBarComponent
+} from "./components";
 
 @NgModule({
   declarations: [
     AppComponent,
     NavBarComponent,
     TaskManagerComponent,
-    TasksComponent
+    TasksComponent,
+    SelectedTaskComponent,
+    AddTaskComponent
   ],
   imports: [
     BrowserModule,

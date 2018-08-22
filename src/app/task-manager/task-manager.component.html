@@ -1,9 +1,0 @@
-<div class="task-manager-container">
-  <input [placeholder]="placeholder" [(ngModel)]="val" />
-  <h2 *ngIf="messageService.flag">{{messageService.message}}</h2>
-  <button (click)="addTask()">Add Task</button>
-  <h1 *ngIf="tasks.length">Tasks</h1>
-  <div *ngFor="let task of tasks">
-    <mat-checkbox>{{task | uppercase}}</mat-checkbox>
-  </div>
-</div>
