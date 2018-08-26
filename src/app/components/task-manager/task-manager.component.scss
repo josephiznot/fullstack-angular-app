@@ -1,3 +1,12 @@
+@import "~src/Sass/boiler_plate";
+
 .task-manager-container {
+  @include flex(space-around, center, column);
   border: 1px black solid;
+  min-height: calc(100vh - 56px);
+}
+.content-container {
+  @include dimensions(95vw, auto, 0px);
+  max-width: 900px;
+  @include flex(center, space-around, column);
 }

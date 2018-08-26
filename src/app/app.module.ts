@@ -2,9 +2,12 @@ import { BrowserModule } from "@angular/platform-browser";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { NgModule } from "@angular/core";
 import { FormsModule } from "@angular/forms";
+import { MatIconModule } from "@angular/material/icon";
 
 import { MatToolbarModule } from "@angular/material/toolbar";
 import { MatCheckboxModule } from "@angular/material/checkbox";
+import { MatInputModule } from "@angular/material/input";
+import { MatDividerModule } from "@angular/material/divider";
 
 import { AppComponent } from "./app.component";
 import {
@@ -29,7 +32,10 @@ import {
     BrowserAnimationsModule,
     MatToolbarModule,
     FormsModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    MatInputModule,
+    MatIconModule,
+    MatDividerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

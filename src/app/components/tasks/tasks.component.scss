@@ -1,0 +1,9 @@
+@import "~src/Sass/boiler_plate";
+.tasks-container {
+  @include dimensions(95vw, 50vh, 0px);
+  max-width: 900px;
+  overflow: scroll;
+}
+.each-task {
+  text-align: left;
+}

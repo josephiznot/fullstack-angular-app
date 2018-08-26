@@ -7,6 +7,6 @@ import { Component, OnInit, NgModule } from "@angular/core";
 })
 export class NavBarComponent implements OnInit {
   constructor() {}
-  title: String = "Joe's Todo App";
+  title: String = "Task Manager Express 2.0";
   ngOnInit() {}
 }

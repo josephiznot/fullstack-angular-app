@@ -1,17 +1,10 @@
-import { Component, OnInit } from "@angular/core";
-
+import { Component } from "@angular/core";
+import { TaskManagerService } from "../../services/task-manager.service";
 @Component({
   selector: "app-task-manager",
   templateUrl: "./task-manager.component.html",
   styleUrls: ["./task-manager.component.scss"]
 })
-export class TaskManagerComponent implements OnInit {
-  constructor() {}
-  placeholder: String = "Enter new task...";
-  tasks: string[] = [];
-  val: string = "";
-
-  addTask = () => {};
-
-  ngOnInit() {}
+export class TaskManagerComponent {
+  constructor(public taskManagerService: TaskManagerService) {}
 }

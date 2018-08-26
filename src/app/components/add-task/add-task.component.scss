@@ -1,0 +1,11 @@
+@import "~src/Sass/boiler_plate";
+
+.add-task-container {
+  @include dimensions(95vw, 90px, 0px);
+  max-width: 900px;
+  @include flex(space-around, flex-start, column);
+  border: 1px solid black;
+}
+.date-container {
+  @include flex(center, space-around, row);
+}
