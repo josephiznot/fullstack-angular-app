@@ -2,9 +2,11 @@
   <section class="date-container">
     <h2>Today</h2>
     <h3>{{date}}</h3>
-    <h1>{{taskManagerService.newTask}}</h1>
   </section>
   <mat-form-field class="example-full-width">
-    <input matInput placeholder="Favorite food" [(ngModel)]="taskManagerService.newTask" (keyup.enter)="taskManagerService.addTask()">
+    <input matInput placeholder="Enter task" [(ngModel)]="taskManagerService.newTask" (keyup.enter)="taskManagerService.addTask()">
   </mat-form-field>
+  <div *ngIf="error">
+    Enter a valid task
+  </div>
 </div>

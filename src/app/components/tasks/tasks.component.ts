@@ -10,6 +10,7 @@ export class TasksComponent implements OnInit {
   constructor(public taskManagerService: TaskManagerService) {}
   ngOnInit() {}
   handleCheck = id => {
+    console.log(this.taskManagerService.selectedTask);
     //display checkmark before executing completion
     setTimeout(() => this.taskManagerService.completeTask(id), 500);
   };

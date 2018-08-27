@@ -1,1 +1,11 @@
 @import "~src/Sass/boiler_plate";
+.json-task {
+  text-align: left;
+}
+.selected-task {
+  @include flex(space-around, center, column);
+}
+.mat-btn {
+  @include flex(center, center, row);
+  width: 100px;
+}

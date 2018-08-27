@@ -30,4 +30,8 @@ export class TaskManagerService {
     let index = this.tasks.findIndex(e => e.id == id);
     this.tasks[index].task = editedTask;
   };
+  resetSelected = () => {
+    console.log(this.selectedTask);
+    this.selectedTask = null;
+  };
 }

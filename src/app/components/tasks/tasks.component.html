@@ -1,5 +1,5 @@
 <div class="tasks-container">
-  <section class="each-task" *ngFor="let task of taskManagerService.tasks; index as i">
+  <section class="each-task" *ngFor="let task of taskManagerService.tasks; index as i" (click)="taskManagerService.selectedTask=task">
     <mat-checkbox (click)="handleCheck(task.id)">{{task.task}}</mat-checkbox>
     <!-- only display divider in between tasks -->
     <mat-divider *ngIf="taskManagerService.tasks.length-1!==i"></mat-divider>

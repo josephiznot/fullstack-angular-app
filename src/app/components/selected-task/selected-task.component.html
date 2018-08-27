@@ -1,3 +1,16 @@
-<p>
-  selected-task works!
-</p>
+<ng-container *ngIf="this.taskManagerService.selectedTask; then selected; else selectTask"></ng-container>
+<ng-template #selected>
+  <mat-card class="selected-task">
+    <h2>{{this.taskManagerService.selectedTask.task}}</h2>
+    <pre class="json-task">{{this.taskManagerService.selectedTask | json}}</pre>
+    <mat-chip-list>
+      <mat-chip color="primary" class="mat-btn" selected>Edit</mat-chip>
+      <mat-chip color="secondary" class="mat-btn" selected (click)="this.taskManagerService.resetSelected()">Cancel</mat-chip>
+    </mat-chip-list>
+  </mat-card>
+</ng-template>
+<ng-template #selectTask>
+  <mat-card>
+    Select a task
+  </mat-card>
+</ng-template>
