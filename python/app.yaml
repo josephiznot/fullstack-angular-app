@@ -5,8 +5,3 @@ threadsafe: true
 handlers:
   - url: /.*
     script: main.app
-# PLEASE DONT SHOW UP ON GITHUBat all
-env_variables:
-  CLOUDSQL_CONNECTION_NAME: your-connection-name
-  CLOUDSQL_USER: root
-  CLOUDSQL_PASSWORD: your-cloudsql-user-password
