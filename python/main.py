@@ -1,6 +1,7 @@
 import webapp2
 import logging
 from google.appengine.ext import ndb
+from google.appengine.api import urlfetch
 class Task(ndb.Model):
     task = ndb.StringProperty()
     isComplete = ndb.BooleanProperty() 
@@ -13,9 +14,6 @@ class GetTasks(webapp2.RequestHandler):
         response = Task.query().fetch()
         self.response.headers['Content-Type'] = 'text/plain'
         self.response.write(response)
-class GetTask(webapp2.RequestHandler):
-    def get(self):
-        try
 class NewTask(webapp2.RequestHandler):
     def post(self):
         print('-----------BODY---------', self.request.POST['task'])
@@ -25,6 +23,11 @@ class NewTask(webapp2.RequestHandler):
         self.response.headers['Content-Type']="text/plain"
         self.response.write(newTask)
         
+class ApiCall(webapp2.RequestHandler):
+    def get(self):
+        response = urlfetch.fetch("https://swapi.co/api/people/1", method="get")
+        self.response.headers['Content-type']="text/plain"
+        self.response.write(response.content)
 #EXCEPTION HANDLERS
 def handle_404(request, response, exception):
     logging.exception(exception)
@@ -38,10 +41,11 @@ def handle_401(request,response, exception):
     logging.exception(exception)
     response.write(exception)
     response.set_status(401)
+    
 app = webapp2.WSGIApplication([
     ('/api/tasks', GetTasks),
-    ('/api/task', GetTask),
-    ('/api/new-task', NewTask)
+    ('/api/new-task', NewTask),
+    ('/api/api-call', ApiCall)
 ], debug=True)
 
 app.error_handlers[401] = handle_401
